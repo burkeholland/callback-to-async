@@ -6,7 +6,7 @@ async function main() {
     let comment = await axios(`${baseURL}comments/53`);
     let post = await axios(`${baseURL}posts/${comment.data.postId}`);
     let user = await axios(`${baseURL}users/${post.data.userId}`);
-    console.log(user);
+    console.log(user.data);
   } catch (error) {
     console.log(error);
   }
